@@ -3,14 +3,15 @@ package webhook
 import (
 	"encoding/json"
 	"fmt"
-	"github.com/aiteung/atapi"
-	"github.com/aiteung/atmessage"
-	"github.com/aiteung/module/model"
-	"github.com/whatsauth/wa"
 	"math/rand"
 	"net/http"
 	"os"
 	"strconv"
+
+	"github.com/aiteung/atapi"
+	"github.com/aiteung/atmessage"
+	"github.com/aiteung/module/model"
+	"github.com/whatsauth/wa"
 )
 
 func Post(w http.ResponseWriter, r *http.Request) {
@@ -37,7 +38,7 @@ func Post(w http.ResponseWriter, r *http.Request) {
 			resp, _ = atapi.PostStructWithToken[atmessage.Response]("Token", os.Getenv("TOKEN"), dt, "https://api.wa.my.id/api/send/message/text")
 		} else {
 			randm := []string{
-				"Hai Hai Haiii kamuuuui " + msg.Alias_name + "\nfahad lagi gaadaa \n aku giseuubott salam kenall yaaaa \n Cara penggunaan WhatsAuth ada di link berikut ini ya kak...\n" + link,
+				"Hai Hai Haiii kamuuuui " + msg.Alias_name + "\nfahad lagi gaadaa \n aku botnya fahad salam kenall yaaaa \n Cara penggunaan WhatsAuth ada di link berikut ini ya kak...\n" + link,
 				"IHHH jangan SPAAM berisik tau giseu lagi tidur",
 				"Kamu ganteng tau",
 				"Ihhh kamu cantik banget",
