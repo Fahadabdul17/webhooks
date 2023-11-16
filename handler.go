@@ -18,7 +18,7 @@ func Post(w http.ResponseWriter, r *http.Request) {
 	var msg model.IteungMessage
 	var resp atmessage.Response
 	json.NewDecoder(r.Body).Decode(&msg)
-	link := "https://medium.com/@1214030/tutorial-mudah-integrasikan-whatsauth-free-2fa-otp-notif-whatsapp-gateway-api-gratis-229ef289e8eb"
+	link := "https://medium.com/@1214030/tutorial-mudah-integrasikan-whatsauth-free-2fa-otp-notif-whatsapp-gateway-api-gratis-229ef289e8eb" + "dan" + "https://youtu.be/XEoBhPYmD1c?si=-VWGmOe_WAjK_60R"
 	if r.Header.Get("Secret") == os.Getenv("SECRET") {
 		if msg.Message == "loc" || msg.Message == "Loc" || msg.Message == "lokasi" || msg.LiveLoc {
 			location, err := ReverseGeocode(msg.Latitude, msg.Longitude)
